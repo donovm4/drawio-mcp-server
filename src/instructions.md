@@ -265,6 +265,13 @@ The default page is **US Letter (850×1100 px)**. All diagram content — main f
 
 - Call `get-style-presets` once to retrieve Azure, flowchart, and general color presets, then apply them consistently.
 
+## Background Color
+
+- The `export-diagram` and `finish-diagram` tools accept a `background` parameter to set the diagram's background color.
+- **Default**: `#FFFFFF` (white). If you do not specify a background, diagrams use a white background.
+- **Transparent background**: Pass `background: "none"` to produce a diagram with a transparent background. This is useful when embedding diagrams in documents or pages with their own background color.
+- Background color is embedded in the `<mxGraphModel>` element's `background` attribute and is respected by Draw.io when rendering.
+
 ## Labels & Annotations
 
 ### Mandatory Labeling — Every Icon Must Have a Label
