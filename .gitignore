@@ -28,7 +28,7 @@ coverage_detail.txt
 *.tgz
 
 # Draw.io files (possibly created during testing or development)
-*.drawio
+# *.drawio
 
 # DEV MODE ONLY — Auto-saved diagrams from export-diagram/finish-diagram
 diagrams/
