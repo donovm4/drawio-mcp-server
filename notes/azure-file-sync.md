@@ -14,7 +14,7 @@ Create an Azure diagram that shows an Azure File Sync workload. It should show t
 
 Output:
 
-![Initial Output](./images/afs/afs-01.png)
+![Initial Output](./images/afs/afs-001.png)
 
 ### Attempt #2
 
@@ -26,7 +26,7 @@ Create an Azure diagram that shows an Azure File Sync workload. It should show t
 
 Output:
 
-![Refinement #1](./images/afs/afs-02.png)
+![Refinement #1](./images/afs/afs-002.png)
 
 
 ### Attempt #3
@@ -55,7 +55,7 @@ If you need more clarification during the creation process, let me know.
 
 Output:
 
-![Refinement #2](./images/afs/afs-03.png)
+![Refinement #2](./images/afs/afs-003.png)
 
 ### Attempt #4
 
@@ -83,3 +83,34 @@ In this singular diagram, you should create two parts. Part 1 (titled "AFS Archi
 
 Output:
 
+![Refinement #2](./images/afs/afs-004.png)
+
+### Attempt #5
+
+Prompt:
+
+```
+Create an Azure diagram for Azure File Sync. For the sync group, there should be two on-premises servers that are the server endpoints and one Azure File share that serves as the cloud endpoint. Create private endpoints for the Azure Storage Sync Service and Azure File share. Be sure to show the networking components to ensure the architectural components are clearly and accurately indicated.
+```
+
+![Refinement #2](./images/afs/afs-005.png)
+
+---
+
+## Analysis
+
+> [IMPORTANT]
+>
+> Attempts 3, 4, and 5 took longer than Attempts 1 and 2
+
+Attempts 2, 3, and 4 seem to be pretty good for different reasons.
+
+Attempt #1 is okay, but was mostly just to gauge what the simplest of prompts would produce.
+
+Attempt #2 is **_very_** high-level, but there wasn't much effort to the prompt at all. It would allow a CSA to explain something, but it probably would be just as quick for the CSA to find an existing diagram or draw one themselves, if they wanted something _this_ basic.
+
+Attempt #3 is pretty good. While you lose a bit of clarity of the Sync Group, you get more of the infrastructure components and flow/routing. It would be a decent point for CSAs to make some edits to the existing components and add some as well.
+
+Attempt #4 seems to be a great starting point for the best of both worlds (overall architecture and sync group relationship). Theoretically, the CSA could make some positional, naming, and other minor edits and have something ready for the customer.
+
+Attempt #5 lost so much life from Attempt #4, likely because I simplified the prompt to lower the context window. GHCP was also reading this file in while running the prompt, which is why although it is shorter compared to Attempts 3 and 4, it still took longer compared to Attempt 2.
